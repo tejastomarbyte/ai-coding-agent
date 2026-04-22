@@ -11,6 +11,23 @@ TOOLS = [
     {
         "type": "function",
         "function": {
+            "name": "Bash",
+            "description": "Execute a shell command",
+            "parameters": {
+                "type": "object",
+                "required": ["command"],
+                "properties": {
+                    "command": {
+                        "type": "string",
+                        "description": "The command to execute"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
             "name": "Read",
             "description": "Read and return the contents of a file",
             "parameters": {
@@ -50,6 +67,10 @@ TOOLS = [
 
 
 def execute_tool(name, args):
+    if name == "Bash":
+        import subprocess
+        result = subprocess.run(args["command"], shell=True, capture_output=True, text=True)
+        return result.stdout + result.stderr
     if name == "Read":
         with open(args["file_path"], "r") as f:
             return f.read()
