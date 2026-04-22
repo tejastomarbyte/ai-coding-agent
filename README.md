@@ -1,4 +1,4 @@
-#SpeedRun - Your Coding Assistant
+# SpeedRun - Your Coding Assistant
 SpeedRun is an AI coding assistant that uses Large Language Models (LLMs) to
 understand code and perform actions through tool calls. In this project,
 I built my own Claude Code from scratch by implementing an LLM-powered
