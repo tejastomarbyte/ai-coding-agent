@@ -6,7 +6,7 @@ coding assistant.
 
 ---
 
-# AI Coding Agent — Built from Scratch
+## AI Coding Agent — Built from Scratch
 
 A Python-based AI coding agent powered by **Claude (claude-haiku-4.5)** via the OpenRouter API. The agent can autonomously read files, write files, and execute shell commands based on natural language prompts — similar to how tools like Claude Code and Cursor work under the hood.
 
